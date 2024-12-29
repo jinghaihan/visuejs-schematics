@@ -1,0 +1,63 @@
+{
+  "name": "visuejs-schematics",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "pnpm@9.5.0",
+  "description": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jinghaihan/visuejs-schematics.git"
+  },
+  "bugs": "https://github.com/jinghaihan/visuejs-schematics/issues",
+  "engines": {
+    "node": ">=20.10.0",
+    "pnpm": ">=9.5.0"
+  },
+  "scripts": {
+    "dev": "visue dev",
+    "preview": "visue preview",
+    "typecheck": "visue typecheck",
+    "clean": "visue clean",
+    "build": "cross-env NODE_OPTIONS=--max-old-space-size=8192 turbo build",
+    "lint": "eslint .",
+    "spellcheck": "cspell lint **/*.ts **/README.md .changeset/*.md --no-progress",
+    "test:unit": "vitest",
+    "catalog": "pnpx codemod pnpm/catalog",
+    "taze": "npx taze -r -w --exclude pnpm",
+    "prepare": "npx simple-git-hooks",
+    "preinstall": "npx only-allow pnpm",
+    "postinstall": "pnpm -r run stub --if-present"
+  },
+  "devDependencies": {
+    "@antfu/ni": "catalog:",
+    "@types/node": "catalog:",
+    "@visuejs/schematics": "workspace:*",
+    "autoprefixer": "catalog:",
+    "bumpp": "catalog:",
+    "cross-env": "catalog:",
+    "cspell": "catalog:",
+    "eslint": "catalog:",
+    "esno": "catalog:",
+    "lint-staged": "catalog:",
+    "postcss": "catalog:",
+    "rollup": "catalog:",
+    "simple-git-hooks": "catalog:",
+    "tailwindcss": "catalog:",
+    "taze": "catalog:",
+    "tsup": "catalog:",
+    "turbo": "catalog:",
+    "typescript": "catalog:",
+    "unbuild": "catalog:",
+    "vite": "catalog:",
+    "vitest": "catalog:",
+    "vue-tsc": "catalog:"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}

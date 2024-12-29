@@ -1,0 +1,96 @@
+{
+  "name": "@visuejs/schematics",
+  "type": "module",
+  "version": "1.0.0",
+  "exports": {
+    "./tsconfig.*.json": {
+      "default": "./tsconfig.*.json"
+    },
+    ".": {
+      "types": "./src/index.ts",
+      "import": "./dist/index.mjs",
+      "default": "./dist/index.mjs"
+    },
+    "./composables": {
+      "types": "./src/composables.ts",
+      "import": "./dist/composables.mjs",
+      "default": "./dist/composables.mjs"
+    },
+    "./constants": {
+      "types": "./src/constants.ts",
+      "import": "./dist/constants.mjs",
+      "default": "./dist/constants.mjs"
+    },
+    "./eslint": {
+      "types": "./src/eslint.ts",
+      "import": "./dist/eslint.mjs",
+      "default": "./dist/eslint.mjs"
+    },
+    "./postcss": {
+      "types": "./src/postcss.ts",
+      "import": "./dist/postcss.mjs",
+      "default": "./dist/postcss.mjs"
+    },
+    "./styles": {
+      "types": "./src/styles.ts",
+      "import": "./dist/styles.mjs",
+      "default": "./dist/styles.mjs"
+    },
+    "./tailwind": {
+      "types": "./src/tailwind.ts",
+      "import": "./dist/tailwind.mjs",
+      "default": "./dist/tailwind.mjs"
+    },
+    "./typings": {
+      "types": "./src/typings.ts",
+      "import": "./dist/typings.mjs",
+      "default": "./dist/typings.mjs"
+    },
+    "./ui": {
+      "types": "./src/ui.ts",
+      "import": "./dist/ui.mjs",
+      "default": "./dist/ui.mjs"
+    },
+    "./utils": {
+      "types": "./src/utils.ts",
+      "import": "./dist/utils.mjs",
+      "default": "./dist/utils.mjs"
+    },
+    "./vite": {
+      "types": "./src/vite.ts",
+      "import": "./dist/vite.mjs",
+      "default": "./dist/vite.mjs"
+    }
+  },
+  "bin": {
+    "visue": "./bin/visue.mjs"
+  },
+  "files": [
+    "dist",
+    "tsconfig.base.json",
+    "tsconfig.library.json",
+    "tsconfig.node.json",
+    "tsconfig.web.json"
+  ],
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "dependencies": {
+    "@visuejs/common-ui": "workspace:*",
+    "@visuejs/eslint-config": "workspace:*",
+    "@visuejs/shared": "workspace:*",
+    "@visuejs/tailwind-config": "workspace:*",
+    "@visuejs/toolkit": "workspace:*",
+    "@visuejs/vite-config": "workspace:*",
+    "cac": "catalog:",
+    "chalk": "catalog:",
+    "execa": "catalog:",
+    "rimraf": "catalog:"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "catalog:",
+    "@rollup/plugin-node-resolve": "catalog:",
+    "rollup-plugin-typescript2": "catalog:",
+    "typescript": "catalog:"
+  }
+}

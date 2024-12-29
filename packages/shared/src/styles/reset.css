@@ -1,0 +1,23 @@
+a,
+a:active,
+a:hover,
+a:link,
+a:visited {
+  @apply no-underline;
+}
+
+input::placeholder,
+textarea::placeholder {
+  @apply opacity-100;
+}
+
+/* input:-webkit-autofill {
+  @apply border-none;
+
+  box-shadow: 0 0 0 1000px transparent inset;
+} */
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  @apply m-0 appearance-none;
+}
